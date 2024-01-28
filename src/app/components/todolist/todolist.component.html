@@ -1,0 +1,16 @@
+
+
+
+    <ul class="list-group" *ngIf="addtodo.length > 0; else notodo">
+      <li class="list-group-item d-flex justify-content-between" *ngFor="let skill of addtodo">
+          <span>{{skill}}</span>
+          <span>
+            <button class="btn btn-primary"><strong>Edit</strong></button>
+            <button class="btn btn-danger ml-2"><strong>Delete</strong></button>
+          </span>
+      </li>
+    </ul>
+
+    <ng-template #notodo>
+      <p>no todo item is added yet</p>
+    </ng-template>
